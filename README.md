@@ -63,3 +63,7 @@ You can set your config via JSON string with next structure:
     "options": ["Array", "of", "options"]
 }
 ```
+
+## Future improvements
+
+1. Parcel 2.0 doesn't have params to set name for output bundles.

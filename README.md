@@ -1,5 +1,7 @@
 # Opinary coding challenge
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/614b3672-f5fe-44a2-975d-d9eb7e289019/deploy-status)](https://app.netlify.com/sites/peppy-gnome-00c257/deploys)
+
 ## In this widget implementation I used the following stack.
 
 -   JS, I believe for this small widget JS is sufficient, customising TS for the project would be an overhead.

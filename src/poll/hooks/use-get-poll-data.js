@@ -43,7 +43,6 @@ export const useGetPollData = ({ config, pollId }) => {
             setQuestion(parserdConfig.question);
             setOptions(preparedOptions);
         } catch (error) {
-            console.error({ error });
             setError(error);
         }
     }, [config, pollId]);

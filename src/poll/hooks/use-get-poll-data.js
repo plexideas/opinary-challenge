@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { CONFIG_NOT_DEFINED, OPTIONS_NOT_DEFINED, QUESTION_NOT_DEFINED } from '../configs';
 
 /**
  *
@@ -14,21 +15,21 @@ export const useGetPollData = ({ config, pollId }) => {
     useEffect(() => {
         try {
             if (!config) {
-                throw new Error('Config is empty!');
+                throw new Error(CONFIG_NOT_DEFINED);
             }
 
             const parserdConfig = JSON.parse(config);
 
             if (!parserdConfig) {
-                throw new Error('Config is empty!');
+                throw new Error(CONFIG_NOT_DEFINED);
             }
 
             if (!parserdConfig.question) {
-                throw new Error('You did not set a question!');
+                throw new Error(QUESTION_NOT_DEFINED);
             }
 
             if (!parserdConfig.options || parserdConfig.options.length < 1) {
-                throw new Error('You did not set options!');
+                throw new Error(OPTIONS_NOT_DEFINED);
             }
 
             const pollResult = JSON.parse(localStorage.getItem(pollId));
@@ -42,6 +43,7 @@ export const useGetPollData = ({ config, pollId }) => {
             setQuestion(parserdConfig.question);
             setOptions(preparedOptions);
         } catch (error) {
+            console.error({ error });
             setError(error);
         }
     }, [config, pollId]);

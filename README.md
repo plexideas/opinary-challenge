@@ -1,21 +1,11 @@
 # Opinary coding challenge
 
-## Requirements
+## In this widget implementation I used the following stack.
 
-### Create a simple embed poll widget without using iframe:
-
-- the application should display a simple poll with configurable questions.
-- after the user chooses one answer, votes should be added to the results and saved. the widget - should be easily added to HTML pages.
-- all results should be displayed in the poll
-- use styles, responsive design, and animations to make it prettier
-- you should be able to use the same widget on multiple pages with different questions the way to configure questions is free but should be documented.
-- it should contain unit tests
-
-### To simplify the process:
-
-- it is not necessary to identify the user, every vote can be saved user can
-- vote again after refresh the page
-- results can be saved in local storage.
+-   JS, I believe for this small widget JS is sufficient, customising TS for the project would be an overhead.
+-   React, I am quite familiar with the library, it is lightweight, highly customisable, which compliments nicely widget requirements.
+-   Tailwinds a popular library for styles. I have chosen it because it is in use.
+-   Parcel - bundler.
 
 ## Stack
 
@@ -24,7 +14,52 @@
 ## Quick start
 
 ```cmd
-yarn 
+yarn
 
 yarn build:widjet
+```
+
+The bundle get into `widget` directory.
+
+## Usage
+
+1. Get widget from `widget` diresctory (and rename if you need)
+
+2. Add js and styles into your page
+
+```html
+<body>
+    <link href="opinary-poll-widget.css" rel="stylesheet" />
+    ...
+    <script src="opinary-poll-widget.js" defer></script>
+    ...
+</body>
+...
+```
+
+3. Add wiidget config via `data-config` attributes
+
+```html
+<div
+    data-config='{
+        "id": "poll-1",
+        "question": "How you feel today?",
+        "options": [
+            "Brilliant! I have so mucenergy",
+            "Always can be worse",
+            "Please, end my misery"
+        ]
+    }'
+    class="opinary-poll-widget"
+></div>
+```
+
+You can set your config via JSON string with next structure:
+
+```json
+{
+    "id": "{id your poll (not required)}",
+    "question": "{Question text}",
+    "options": ["Array", "of", "options"]
+}
 ```

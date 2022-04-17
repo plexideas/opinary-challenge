@@ -24,7 +24,7 @@
 ## Quick start
 
 ```cmd
-yarn
+yarn 
 
-yarn build:widget
+yarn build:widjet
 ```

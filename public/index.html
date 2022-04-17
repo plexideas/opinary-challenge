@@ -61,5 +61,20 @@
         }'
             class="opinary-poll-widget"
         ></div>
+        <br />
+        <hr />
+        <button
+            style="border: 1px solid gray; border-radius: 4px; margin: 16px; padding: 8px"
+            id="clearBtn"
+        >
+            Clear localStorage
+        </button>
     </body>
+
+    <script>
+        document.getElementById('clearBtn').onclick = function () {
+            localStorage.clear();
+            location.reload();
+        };
+    </script>
 </html>

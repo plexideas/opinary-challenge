@@ -6,7 +6,7 @@
 
 -   JS, I believe for this small widget JS is sufficient, customising TS for the project would be an overhead.
 -   React, I am quite familiar with the library, it is lightweight, highly customisable, which compliments nicely widget requirements.
--   Tailwinds a popular library for styles. I have chosen it because it is in use.
+-   Tailwinds a popular library for styles. I have chosen it because it is easy in use.
 -   Parcel - bundler.
 
 ## Stack

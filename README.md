@@ -25,7 +25,7 @@ The bundle get into `widget` directory.
 
 ## Usage
 
-1. Get widget from `widget` diresctory (and rename if you need)
+1. Get widget from `widget` directory (and rename if you need)
 
 2. Add js and styles into your page
 
